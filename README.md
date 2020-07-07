@@ -9,11 +9,9 @@ Indice:
 ## Crear y configurar VPN Skytap
 Acceda desde la consola de IBM al servicio de Skytap **Launch Skytap on IBM Cloud**, servicio que previamente debió adquirir.
 
-Imagen1
+<img width="960" alt="img1" src="https://user-images.githubusercontent.com/60628267/86811209-43bca600-c043-11ea-9c14-30a0b92662d7.PNG">
 
-Ingrese al ambiente en el cual creará la VPN.
-
-Imagen 2
+Desde la barra de navegación, haga clic en **Environments** y seleccione el ambiente en el cual creará la VPN.
 
 ### Crear IP Pública estática 
 Desde la barra de navegación, ingrese a **Manage -> Public IPs**. En este paso se creará una dirección IP pública estática la cual se utiliza como la dirección IP de Skytap para la conexión VPN. 
