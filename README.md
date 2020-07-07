@@ -24,9 +24,10 @@ Haga clic en **Static Public IP address**, deberá elegir de la lista de regione
 Imagen4
 
 ### Crear una VPN 
-Desde la barra de navegación, haga clic en **Manage > WAN **
+Desde la barra de navegación, haga clic en **Manage -> WAN -> New VPN **
 
 Imagen
+
 
 
 
