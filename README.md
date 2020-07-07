@@ -36,13 +36,19 @@ Especificaciones de los parametros a configurar:
 En los parámetros de Fase 1 y 2, se modifican de la siguiente manera:
 - Phase 1 encryption algorithm: aes 256 (este tipo de encriptación de alta seguridad)
 - Phase 1 hash algorithm: sha256
+- Phase 2 perfect forward secrecy (PFS) : ON 
 Las demás configuraciones se dejan por defecto como vienen.
-Phase 2 perfect forward secrecy (PFS) : ON 
 
 Una vez realizada esta configuración se procede a la creación y configuración de IPSec VPN, en donde se obtendrán los parámetros necesarios para terminar esta configuración en Skytap.
 
 
-
 ## Crear y configurar IPSec VPN 
 
+IPSec es un protocolo diseñado para autenticar y cifrar todo el tráfico de IP, mediante la conexión de VPN permite la gestión de tráfico a través de un tunel de cifrado el cual permite establecer una conexión segura. Para acceder a este servicio desde la consola de IBM Cloud acceda a **Infraestructura Clásica -> Network -> IPSec VPN**
 
+
+<img width="384" alt="img6" src="https://user-images.githubusercontent.com/60628267/86841780-fdc70880-c069-11ea-923a-6312bc7e3e2b.PNG">
+
+1. Cree el servicio haciendo clic en **Order IPSec VPN**.
+2. Seleccione la ubicación donde quiere que sea provisto su servicio a crear. Se recomienda DAL13-Dallas. 
+![img7](https://user-images.githubusercontent.com/60628267/86842163-6f9f5200-c06a-11ea-9004-980ddd757ea7.PNG)
