@@ -54,7 +54,7 @@ IPSec es un protocolo diseñado para autenticar y cifrar todo el tráfico de IP,
 <img width="323" alt="img7" src="https://user-images.githubusercontent.com/60628267/86842310-a07f8700-c06a-11ea-86a7-bfdea5f1e433.PNG">
 3. Una vez creado el nuevo IPSec se podrá visualizar la siguiente pantalla, en la cual se deberá configurar todos los parámetros de negociación.
 <img width="479" alt="img8" src="https://user-images.githubusercontent.com/60628267/86842488-e5a3b900-c06a-11ea-9c96-d6e087ad9a62.PNG">
-A continuación, encontrará a masa detalle que datos proporcionar para la configuración.
+A continuación, encontrará a mas detalle que datos proporcionar para la configuración.
 - Tunnel Name: Ingresar un nombre para el servicio (campo a disposición del usuario).
 -  Hosted Peer Address: Automáticamente al ingresar a esta pantalla se llena esta IP. (Tenga presente esta IP, ya que es la misma que debe proporcionara en **Remote peer IP** en la VPN de Skytap.
 
