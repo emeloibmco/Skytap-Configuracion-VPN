@@ -15,17 +15,31 @@ Desde la barra de navegación, haga clic en **Environments** y seleccione el amb
 
 ### Crear IP Pública estática 
 Desde la barra de navegación, ingrese a **Manage -> Public IPs**. En este paso se creará una dirección IP pública estática la cual se utiliza como la dirección IP de Skytap para la conexión VPN. 
-Imagen4
+
+<img width="426" alt="img3" src="https://user-images.githubusercontent.com/60628267/86812051-2f2cdd80-c044-11ea-96d4-0666e708f537.PNG">
 
 Haga clic en **Static Public IP address**, deberá elegir de la lista de regiones disponibles la que pertenece su ambiente de Skytap y luego haga clic en añadir (Add IP address). Como respuesta obtendrá una mensaje en pantalla: Added public IP address [Static Public IP address] in region [region].
 
-Imagen4
+<img width="674" alt="img4" src="https://user-images.githubusercontent.com/60628267/86812174-5388ba00-c044-11ea-9319-a436b4cc8187.PNG">
 
 ### Crear una VPN 
-Desde la barra de navegación, haga clic en **Manage -> WAN -> New VPN **
+Desde la barra de navegación, haga clic en **Manage -> WAN -> New VPN**. Se abrirá un recuadro como el siguiente en el cual deberá proporcionar los datos de configuración. Verifique que la casilla de **IBM peer IP** tenga la IP Pública estática que creó en el paso anterior.
 
-Imagen
+<img width="263" alt="img5" src="https://user-images.githubusercontent.com/60628267/86812143-4966bb80-c044-11ea-9f7a-174a6ee62603.PNG">
 
+Especificaciones de los parametros a configurar:
+- IBM subnet: Subred a la que pertenece la máquina virtual del ambiente sobre el que se está trabajando.
+- IBM Peer IP: IP Pública estática 
+- Remote peer IP: IP Pública del lado remoto (Se configurará en los próximos pasos)
+- NAT: OFF (no se tendrán varias máquinas conectadas al mismo ambiente por lo que no es necesario tenerlo habilitado).
+
+En los parámetros de Fase 1 y 2, se modifican de la siguiente manera:
+- Phase 1 encryption algorithm: aes 256 (este tipo de encriptación de alta seguridad)
+- Phase 1 hash algorithm: sha256
+Las demás configuraciones se dejan por defecto como vienen.
+Phase 2 perfect forward secrecy (PFS) : ON 
+
+Una vez realizada esta configuración se procede a la creación y configuración de IPSec VPN, en donde se obtendrán los parámetros necesarios para terminar esta configuración en Skytap.
 
 
 
