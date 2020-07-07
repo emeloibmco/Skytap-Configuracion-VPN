@@ -2,11 +2,11 @@
 En esta guía aprenderá cómo crear una conexión VPN entre su cuenta de Skytap y una red externa, la cual para este caso será una VPN IPsec de IBM. El propósto de las VPNs es conectar las máquinas virtuales de Skytap a otra máquina de la red de conexión.
 
 Indice:
-1. Crear y configurar VPN Skytap
+1. [Crear y configurar VPN Skytap] (#1-Crear-y-configurar-VPN-Skytap)
 2. Crear y configurar IPSec VPN 
 3. Probar conexión VPN
 
-## Crear y configurar VPN Skytap
+## 1. Crear y configurar VPN Skytap
 Acceda desde la consola de IBM al servicio de Skytap **Launch Skytap on IBM Cloud**, servicio que previamente debió adquirir.
 
 <img width="960" alt="img1" src="https://user-images.githubusercontent.com/60628267/86811209-43bca600-c043-11ea-9c14-30a0b92662d7.PNG">
@@ -55,7 +55,7 @@ Una vez realizada esta configuración se procede a la creación y configuración
  
 Agregue la subred remota (**Hosted Private Subnets**, se le proporcionará en el próximo paso), también agregue la subred a la que pertenece la **Remote Peer IP** que acaba de configurar.
 
-## Crear y configurar IPSec VPN 
+## 2. Crear y configurar IPSec VPN 
 
 IPSec es un protocolo diseñado para autenticar y cifrar todo el tráfico de IP, mediante la conexión de VPN permite la gestión de tráfico a través de un tunel de cifrado el cual permite establecer una conexión segura. Para acceder a este servicio desde la consola de IBM Cloud acceda a **Infraestructura Clásica -> Network -> IPSec VPN**
 
@@ -81,9 +81,10 @@ A continuación, encontrará a masa detalle que datos proporcionar para la confi
 Las demás configuraciones se deberán dejar tal como se configuró la VPN de Skytap, con el fin de no tener problemas con las fases de encriptacion y autenticación.
 
 
-## Probar conexión entre VPNs.
+## 3. Probar conexión entre VPNs.
 
 Después de crear la conexión VPNs, pruébela con la herramienta de **Test WAN**.
+
 <img width="406" alt="img10" src="https://user-images.githubusercontent.com/60628267/86849883-f7d72480-c075-11ea-9de5-9be4d5be12a2.PNG">
 
 Ingrese una dirección IP y un número de puerto remoto desde una máquina en una de las subredes remotas incluidas. Idealmente, ingrese la dirección IP de una máquina que pueda responder a pings.
