@@ -31,16 +31,29 @@ Especificaciones de los parametros a configurar:
 - IBM subnet: Subred a la que pertenece la máquina virtual del ambiente sobre el que se está trabajando.
 - IBM Peer IP: IP Pública estática 
 - Remote peer IP: IP Pública del lado remoto, es la misma **Hosted Peer Address** que se configura en IPSec VPN. (Se configurará en los próximos pasos)
+- Preshared Key: Contraseña a disposición del usuario.
 - NAT: OFF (no se tendrán varias máquinas conectadas al mismo ambiente por lo que no es necesario tenerlo habilitado).
 
 En los parámetros de Fase 1 y 2, se modifican de la siguiente manera:
-- Phase 1 encryption algorithm: aes 256 (este tipo de encriptación de alta seguridad)
-- Phase 1 hash algorithm: sha256
+- Phase encryption algorithm: aes 256 (este tipo de encriptación de alta seguridad)
+- Phase hash algorithm: sha256
+- Group DH: modp1536
+
+Para Fase 1:
+- Key Life (in seconds): 28800
+
+Para Fase 2:
+- Key Life (in seconds): 3600
+
 - Phase 2 perfect forward secrecy (PFS) : ON 
 Las demás configuraciones se dejan por defecto como vienen.
 
-Una vez realizada esta configuración se procede a la creación y configuración de IPSec VPN, en donde se obtendrán los parámetros necesarios para terminar esta configuración en Skytap.
 
+Una vez realizada esta configuración se procede a la creación y configuración de IPSec VPN, en donde se obtendrán los parámetros necesarios para terminar esta configuración en Skytap, pero antes de eso, al guardar la configuración realizada le aparecerá en pantalla todos los detalles de la VPN. Al lado izquierdo encontrará un recuadro, tal como se muestra en la imagen a continuación.
+
+<img width="294" alt="img9" src="https://user-images.githubusercontent.com/60628267/86848768-3966d000-c074-11ea-8f90-ae46753b7a6f.PNG">
+ 
+Agregue la subred remota (**Hosted Private Subnets**, se le proporcionará en el próximo paso), también agregue la subred a la que pertenece la **Remote Peer IP** que acaba de configurar.
 
 ## Crear y configurar IPSec VPN 
 
@@ -54,8 +67,20 @@ IPSec es un protocolo diseñado para autenticar y cifrar todo el tráfico de IP,
 <img width="323" alt="img7" src="https://user-images.githubusercontent.com/60628267/86842310-a07f8700-c06a-11ea-86a7-bfdea5f1e433.PNG">
 3. Una vez creado el nuevo IPSec se podrá visualizar la siguiente pantalla, en la cual se deberá configurar todos los parámetros de negociación.
 <img width="479" alt="img8" src="https://user-images.githubusercontent.com/60628267/86842488-e5a3b900-c06a-11ea-9c96-d6e087ad9a62.PNG">
-A continuación, encontrará a mas detalle que datos proporcionar para la configuración.
+
+A continuación, encontrará a masa detalle que datos proporcionar para la configuración.
+
 - Tunnel Name: Ingresar un nombre para el servicio (campo a disposición del usuario).
--  Hosted Peer Address: Automáticamente al ingresar a esta pantalla se llena esta IP. (Tenga presente esta IP, ya que es la misma que debe proporcionara en **Remote peer IP** en la VPN de Skytap.
+- Hosted Peer Address: Automáticamente al ingresar a esta pantalla se llena esta IP. Tenga presente esta IP, ya que es la misma que debe proporcionara en **Remote peer IP** en la VPN de Skytap.
+- Remote Peer Address: Es la direccion de la **IP Pública estática** proporcionada en la configuración de la VPN de Skytap.
+- Preshared Key: Contraseña a disposición del usuario (misma clave configurada en VPN Skytap).
+- Diffie-Hellman Group: 5
+- Customer Subnets: Aquí se deberan incluir las subredes a las que pertenece la VM de Skytap.
+- Hosted Private Subnets: Haga clic en **+ Add Hosted Private Subnet** y seleccione la subred.
+
+Las demás configuraciones se deberán dejar tal como se configuró la VPN de Skytap, con el fin de no tener problemas con las fases de encriptacion y autenticación.
+
+
+
 
 
