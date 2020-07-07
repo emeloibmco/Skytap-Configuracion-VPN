@@ -81,6 +81,19 @@ A continuación, encontrará a masa detalle que datos proporcionar para la confi
 Las demás configuraciones se deberán dejar tal como se configuró la VPN de Skytap, con el fin de no tener problemas con las fases de encriptacion y autenticación.
 
 
+## Probar conexión entre VPNs.
+
+Después de crear la conexión VPNs, pruébela con la herramienta de **Test WAN**.
+<img width="406" alt="img10" src="https://user-images.githubusercontent.com/60628267/86849883-f7d72480-c075-11ea-9de5-9be4d5be12a2.PNG">
+
+Ingrese una dirección IP y un número de puerto remoto desde una máquina en una de las subredes remotas incluidas. Idealmente, ingrese la dirección IP de una máquina que pueda responder a pings.
+
+<img width="306" alt="img11" src="https://user-images.githubusercontent.com/60628267/86850111-543a4400-c076-11ea-85ff-88da9215e2c5.PNG">
+
+Skytap realiza cuatro pruebas de conectividad y muestra los resultados, si aparecen tal como se muestra a continuación estas correctamente configuradas las dos VPN y se estan comunicando entre sí. Una vez obtenido este resultado, habilite la VPN, haciendo clic en **Enable**.
+
+
+
 
 
 
