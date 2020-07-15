@@ -1,4 +1,4 @@
-# Skytap-Configuración-VPN
+# Skytap-Configuración-VPN :closed_lock_with_key:
 En esta guía aprenderá cómo crear una conexión VPN entre su cuenta de Skytap y una red externa, la cual para este caso será una VPN IPsec de IBM. El propósto de las VPNs es conectar las máquinas virtuales de Skytap a otra máquina de la red de conexión.
 
 # Indice:
@@ -87,7 +87,7 @@ A continuación, encontrará a masa detalle que datos proporcionar para la confi
 Las demás configuraciones se deberán dejar tal como se configuró la VPN de Skytap, con el fin de no tener problemas con las fases de encriptacion y autenticación.
 
 
-## 3. Probar conexión entre VPNs.
+## 3. Probar conexión entre VPNs. :white_check_mark:
 
 Después de crear la conexión VPNs, pruébela con la herramienta de **Test WAN**.
 
@@ -101,6 +101,8 @@ Skytap realiza cuatro pruebas de conectividad y muestra los resultados, si apare
 
 
 
+## Autores.:woman: :man:
 
+IBM Cloud Tech Sales
 
 
