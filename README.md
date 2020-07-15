@@ -4,9 +4,9 @@ En esta guía aprenderá cómo crear una conexión VPN entre su cuenta de Skytap
 # Indice:
 1. [Crear y configurar VPN Skytap](#1-crear-y-configurar-vpn-skytap).
 
-1.1. [Crear IP Pública estática](#1.1.-crear-ip-pública-estática).
+1.1. [Crear IP Pública estática](#11-crear-ip-pública-estática).
 
-1.2. [Crear una VPN](#1.2.-crear-una-vpn).
+1.2. [Crear una VPN](#12-crear-una-vpn).
 
 2. [Crear y configurar IPSec VPN](#2-crear-y-configurar-ipsec-vpn).
 
